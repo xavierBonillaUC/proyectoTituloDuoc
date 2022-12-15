@@ -1,0 +1,108 @@
+<!--Static-->
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="{%static 'css/styles.css'%}">
+  <script src="{%static 'js/icons.js'%}"></script>
+
+  <!-- FONTAWESOME-->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.  5/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="http://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+  <!--Bootstrap cdn-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <!--Titulo Pagina-->
+  <title>Process SA</title>
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="d-flex justify-content-between d-md-none d-block">
+        <button class="btn px-1 py-0 open-btn me-2"><i class="fal fa-stream"></i></button>
+        <a class="navbar-brand fs-4" href="#"><span class="bg-dark rounded px-2 py-0 text-white">Process SA</span></a>
+
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fal fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <div id="logoContainer">
+          <a class="navbar-brand fs-4" href="#">Process SA</span></a>
+        </div>
+
+        <ul class="navbar-nav  mb-2 mb-lg-0">
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a href="" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'logout' %}" class="nav-link">
+              Cerrar Sesion
+            </a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a href="{% url 'signin' %}" class="nav-link">Ingresar</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+  </nav>
+  <div class="row">
+    <section class="col-md-4 offset-md-4 mt-5 "  >
+      <div >
+        <form method="POST" class="card card-body">
+          <img src="{% static 'img/processLogo.png' %}" alt="" width='200px' id="logoSign" >
+          {{error}}
+          {% csrf_token %} <br>
+          
+  
+  
+          <div class="mb-3">
+            <br>
+            <label for="username">Usuario:</label>
+            <input type="text" name="username" id="username" class="form-control" placeholder="Escribe tu usuario...">
+          </div>
+          <div class="mb-3">
+            <label for="password">Contraseña:</label>
+            <input type="password" name="password" id="password" class="form-control"
+              placeholder="Escribe tu contraseña" />
+          </div>
+  
+          <button class="btn btn-primary" href=" {% url 'd_home' %}">
+            Ingresar(Disenador)
+          </button>
+        </form>
+      </div>
+
+      <div class=" text-center">
+        <a href="{% url 'a_home' %}" type="button">Administrador</a>
+        <a href="" type="button">Usuario</a>
+
+
+      </div>
+    </section>
+    
+  </div>
+</body>
+<!-- Footer-->
+<footer class="wg-dark text-center text-lg-start mt-5">
+  <div class="text-center p-4" style="background-color: rgba(12, 36, 218, 0.2) " color:black;>
+    © 2022 Autores: Felipe Escobedo, Xavier Bonilla
+  </div>
+</footer>
+
+</html>

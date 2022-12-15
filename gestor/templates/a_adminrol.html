@@ -1,0 +1,76 @@
+{% extends 'a_base.html' %}
+<!--Contenido  -->
+{% block admin %}
+<div class="dashboard-content px-3 pt-4">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="fs-3">Administracion de Roles</h2>
+
+      <a>Unidad Interna</a>      
+      <select class="form-select ">
+        <option selected>Seleccione Unidad Interna...</option>
+      </select><br>     
+      <div class="input-group-prepend">
+        <a>Usuarios</a>
+      <div class="input-group">
+        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+          <option selected>Seleccione usuario a asignar rol...</option>
+        </select>
+      </div> <br>
+
+      <a>Rol:</a>
+      <div class="input-group">
+        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+          <option selected>Seleccione rol...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <button class="btn btn-success" type="button">Agregar</button>
+        <button class="btn btn-danger" type="button">Eliminar</button>
+      </div> 
+      </div><br>                  
+
+      <a>Usuarios listados en la unidad interna</a>
+      <table class="table table-striped ">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Usuario/Tipo Usuario</th>
+            <th scope="col">Rol</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="btn btn-info">Modificar</button>
+      <a href="{% url 'a_crearrol' %}" class="bg-primary rounded px-3 py-2 text-white text-decoration-none" >Nuevo Rol</a>
+      
+
+    </div>
+  </div>
+  
+</div><br>
+
+
+{% endblock %}

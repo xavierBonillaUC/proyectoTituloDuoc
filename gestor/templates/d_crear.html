@@ -1,0 +1,79 @@
+{% extends 'd_base.html' %}
+<!--Contenido  -->
+{% block diseno %}
+<div class="dashboard-content px-3 pt-4">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="fs-3">Crear Flujo</h2>
+
+      <a>Nombre del flujo</a>      
+      <div class="input-group input-group-sm mb-3">
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ej: Gestion de Pedidos">
+      </div>
+
+      <a>Agregar Tareas</a>
+      <div class="input-group">
+        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+          <option selected>Seleccione tarea...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <button class="btn btn-primary" type="button">Agregar</button>
+      </div> <br>
+
+      <a>Agregar responsables</a>
+      <div class="input-group">
+        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+          <option selected>Seleccione usuario...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <button class="btn btn-primary" type="button">Agregar</button>
+      </div> <br>
+      <button class="btn btn-success">Crear Flujo</button> <br> <br>
+
+
+      <a>Tareas en el flujo</a>
+      <table class="table table-striped ">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      
+
+    </div>
+  </div>
+  
+</div><br>
+
+
+{% endblock %}

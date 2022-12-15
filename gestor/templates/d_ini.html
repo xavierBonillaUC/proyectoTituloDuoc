@@ -1,0 +1,72 @@
+{% extends 'd_base.html' %}
+<!--Contenido  -->
+{% block diseno %}
+<div class="dashboard-content px-3 pt-4">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="fs-3">Iniciar Flujo</h2>
+
+      <a>Flujos de Trabajos</a>      
+      <select class="form-select ">
+        <option selected>Seleccione Flujo de Trabajo...</option>
+        <option value="1">Uno</option>
+        <option value="2">Dos</option>
+        <option value="3">Tres</option>
+      </select><br>
+      
+
+
+      
+      <div class="input-group-prepend">
+        <label for="feIni ">Fecha Inicio: </label>
+        <input type="date" id="feIni" name="feIni">
+        <label for="feFin">Fecha Final:</label>
+        <input type="date" id="feFin" name="feFin">
+      </div><br>
+
+      
+       
+
+       <button class="btn btn-success">Iniciar Flujo</button><br><br>
+
+
+      <a>Flujos de Trabajos Activos</a>
+      <table class="table table-striped ">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+      
+
+    </div>
+  </div>
+  
+</div><br>
+
+
+{% endblock %}

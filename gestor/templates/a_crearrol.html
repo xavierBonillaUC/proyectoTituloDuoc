@@ -1,0 +1,81 @@
+{% extends 'a_base.html' %}
+<!--Contenido  -->
+{% block admin %}
+<div class="dashboard-content px-3 pt-4">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="fs-3">Crear Rol</h2>
+
+      <div class="input-group-prepend">
+        <a>Unidad interna</a>
+      <div class="input-group">
+        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+          <option selected>Seleccione unidad interna...</option>
+        </select>
+      </div> <br>
+
+      <a>Nombre Rol:</a>
+      <div class="input-group">
+        </label>
+                        <input type="text" name="username" id="username"
+                        class="form-control" placeholder="Ingrese nombre..."><br>
+        
+      </div><br>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+            Mayor Jerarquia
+        </label>
+        <button class="btn btn-success" type="button">Agregar</button>
+      </div><br>                  
+
+      <p class="fs-5">Roles listados en la unidad interna</p>
+      <table class="table table-striped ">
+        <thead>
+          <tr>
+            <th scope="col">Unidad Interna</th>
+            <th scope="col">Rol Mayor Jerarquia</th>
+            <th scope="col">Roles </th>
+            <th scope="col">Tipo Usuario</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td><select name="" id="">
+                  <optgroup label="">
+                    <option value=""></option>
+                    
+                  </optgroup>
+                  <optgroup label="">
+                    <option value=""></option>
+                    
+                  </optgroup>
+                </select></td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="btn btn-info">Modificar</button>
+      <button class="btn btn-danger">Eliminar</button>
+      
+
+    </div>
+   
+  </div>
+{% endblock %}
+</div><br>

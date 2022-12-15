@@ -1,0 +1,75 @@
+{% extends 'a_base.html' %}
+<!--Contenido  -->
+{% block admin %}
+<div class="dashboard-content px-3 pt-4">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="fs-3">Crear Unidad Interna</h2>
+        <div class="row">
+
+
+
+          
+          <div class="row">
+            <div class="col">
+              <label for="nombre">Nombre Unidad Interna:</label>
+                      <input type="text" name="username" id="username"
+                      class="form-control" placeholder="Nombre Unidad Interna...">
+            </div>
+            <div class="col">
+              <a>Usuarios:</a>
+      <div class="input-group">
+        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+          <option selected>Seleccione usuario...</option>
+        </select>
+        <button class="btn btn-primary" type="button">Agregar</button>
+      </div>
+            </div>  
+          </div><br>
+
+
+
+
+                
+        </div><br>
+
+
+
+    
+      
+
+      <a>Usuarios listados en la unidad interna</a>
+      <table class="table table-striped ">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Usuario/Tipo Usuario</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td><select name="" id="">
+                  <optgroup label="">
+                    <option value="Pedro/Admin">Pedro/Admin</option>
+                
+                  </optgroup>
+                </select></td>
+          </tr>
+          
+          
+        </tbody>
+      </table>
+
+      <button class="btn btn-success">Crear</button>
+      <a href="{% url 'signin' %}" class="bg-primary rounded px-3 py-2 text-white text-decoration-none" >Asignar Roles</a>
+    </div>
+  </div>
+  
+</div><br>
+
+
+{% endblock %}

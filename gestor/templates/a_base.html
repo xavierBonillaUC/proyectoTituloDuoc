@@ -1,0 +1,140 @@
+<!--Static-->
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="{%static 'css/styles.css'%}">
+    <script src="{%static 'js/icons.js'%}"></script>
+    
+    <!-- FONTAWESOME-->
+    <link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.  5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="http://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+
+    <!--Bootstrap cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!--Titulo Pagina-->
+    <title>Process SA</title>
+
+    
+  </head>
+  <body>
+    <div class="main-container d-flex">
+      <div class="sidebar" id="side_nav">
+        <div class="header-box px-2 pt-3 pb-4 d-flex justify-content-between">
+          <h1 class="fs-5"><span class="bg-primary text-dark rounded shadow px-2 me-0">App</span> <span class="text-white">Administrador</span></h1>
+          <button class="btn d-md-none d-block close-btn px-1 py-0 text-white"><i class="fal fa-stream"></i></button>
+        </div>
+  
+        <ul class="list-unstyled px-2">
+          <a  class="text-decoration-none px-3 py-2 d-block text-decoration-none text-white"> Gestion de Usuario</a>
+          <li class=""><a href="{% url 'a_crear' %}" class="text-decoration-none px-4 py-2 d-block"><i class="fad fa-user-plus"></i> Crear Usuario</a></li>
+          <li class=""><a href="{% url 'a_adminus' %}" class="text-decoration-none px-4 py-2 d-block"><i class="fas fa-users-cog"></i> Administrar Usuario</a></li>
+        </ul>
+
+        <hr class="h-color mx-2">
+  
+        <ul class="list-unstyled px-2">
+          <a  class="text-decoration-none px-3 py-2 d-block text-decoration-none text-white"> Gestion Organizacional</a>
+          <li class=""><a href="{% url 'a_crearuni' %}" class="text-decoration-none px-4 py-2 d-block"><i class="far fa-network-wired"></i> Crear Unidad Interna</a></li>
+          <li class=""><a href="{% url 'a_adminrol' %}" class="text-decoration-none px-4 py-2 d-block"><i class="fas fa-user-tag"></i> Administrar Rol</a></li>
+          <li class=""><a href="{% url 'a_adminuni' %}" class="text-decoration-none px-4 py-2 d-block"><i class="fal fa-th-list"></i> Administrar Unidad Interna</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+          <div class="container-fluid">
+            <div class="d-flex justify-content-between d-md-none d-block">
+              <button class="btn px-1 py-0 open-btn me-2"><i class="fal fa-stream"></i></button> 
+                  <a class="navbar-brand fs-4" href="#"><span class="bg-primary rounded px-2 py-0 text-white">Process SA</span></a>
+           
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fal fa-bars"></i>
+          </button>          
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <div id="logoContainer">
+              <img src="{% static 'img/processLogo.png' %}" alt="" id="procesLogo">
+            </div>
+            
+            <ul class="navbar-nav  mb-2 mb-lg-0">
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a href="{% url 'a_home' %}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'logout' %}" class="nav-link">
+                  Cerrar Sesion
+                  </a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                  <a href="{% url 'signin' %}" class="nav-link">Ingresar</a>
+                </li>
+                {% endif %}      
+            </ul>
+          </div>
+        </nav>
+
+      
+          
+        
+        {% block admin %}
+        {% endblock %}
+        
+      
+      </div>
+    </div> 
+
+    
+    
+    
+    
+
+    <!-- Footer--> 
+     <footer class="wg-dark text-center text-lg-start ">
+      <div class="text-center p-4" style="background-color: rgba(12, 36, 218, 0.2) " color:black;>
+        © 2022 Autores: Felipe Escobedo, Xavier Bonilla 
+      </div>
+     </footer> 
+
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+      $(".sidebar ul li").on('click' , function(){
+        $(".sidebar ul li.active").removeClass("active");
+        $(this).addClass("active");  
+      })
+     
+    </script>
+    <script>
+      $('.open-btn').on('click', function() {
+        $('.sidebar').addClass('active');
+        
+       });
+      $('.close-btn').on('click', function() {
+        $('.sidebar').removeClass('active');
+        
+       })
+
+    </script>
+    
+
+  </body>
+  
+
+  
+    
+    
+   
+
+
+</html>
