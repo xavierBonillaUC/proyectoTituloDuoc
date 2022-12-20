@@ -1,0 +1,50 @@
+{% extends "f_base.html" %}
+
+{% block func %}
+<div class="dashboard-content px-3 pt-4">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="fs-3">Crear Tarea</h2>
+
+      <a>Nombre de tarea</a>      
+      <select class="form-select ">
+        <option selected>Seleccione Flujo de Trabajo...</option>
+      </select><br>
+      
+
+
+      <h2 class="fs-4 fw-normal">Asignar plazo:</h2>
+      <div class="input-group-prepend">
+        <label for="feFin">Fecha Final:</label>
+        <input type="date" id="feFin" name="feFin">
+      </div><br>
+
+      
+
+      <a>Asignar responsable:</a>
+      <div class="input-group">
+        <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+          <option selected>Seleccione usuario...</option>
+          
+        </select>
+        <button class="btn btn-primary" type="button">Agregar</button>
+      </div> <br>
+       
+
+       
+
+
+      <div class="form-group">
+    <label for="exampleFormControlTextarea1">Descripcion:</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div> <br>
+
+  <button class="btn btn-success">Crear Tarea</button><br><br>
+      
+
+    </div>
+  </div>
+  
+</div><br>
+
+{% endblock %}

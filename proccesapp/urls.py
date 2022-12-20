@@ -45,6 +45,12 @@ urlpatterns = [
     path('a_adminrol/', views.a_adminrol, name='a_adminrol'),
     path('a_admUni/', views.a_admUni, name='a_admUni'),
     path('a_crearrol/', views.a_crearrol, name='a_crearrol'),
+    path('f_home/', views.f_home, name='f_home'),
+    path('f_crearTa/', views.f_crearTa, name='f_crearTa'),
+    path('f_tareasig/', views.f_tareasig , name='f_tareasig'),
+    path('f_vista/', views.f_vista , name='f_vista'),
+    path('f_carga/', views.f_carga , name='f_carga'),
+    
     
     
     

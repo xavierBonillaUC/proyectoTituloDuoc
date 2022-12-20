@@ -12,11 +12,8 @@ class TaskForm(forms.ModelForm):
         }
 
 #class UsuariosForm(forms.ModelForm):
- #   class Meta:
-  #      model = Usuarios
-   #     field = ['username', 'password', ]
-    #    widgets = {
-     #       'username' : forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Escribe usuario'}),
-      #      'password' : forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Escribe Contrasena'}),
-       #     }
+#   class Meta:
+#      model = Usuarios
+#      fields = ['id_usuario','nombre_usuario','email','telefono','username','password','tipo_nivel','estatus','registrado_por']
+      
         

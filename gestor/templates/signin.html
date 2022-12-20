@@ -44,7 +44,7 @@
         </div>
 
         <ul class="navbar-nav  mb-2 mb-lg-0">
-          {% if user.is_authenticated %}
+          
           <li class="nav-item">
             <a href="" class="nav-link">Home</a>
           </li>
@@ -53,18 +53,18 @@
               Cerrar Sesion
             </a>
           </li>
-          {% else %}
+          
           <li class="nav-item">
             <a href="{% url 'signin' %}" class="nav-link">Ingresar</a>
           </li>
-          {% endif %}
+          
         </ul>
       </div>
   </nav>
   <div class="row">
     <section class="col-md-4 offset-md-4 mt-5 "  >
       <div >
-        <form method="POST" class="card card-body">
+        <form action method="POST" class="card card-body">
           <img src="{% static 'img/processLogo.png' %}" alt="" width='200px' id="logoSign" >
           {{error}}
           {% csrf_token %} <br>
@@ -81,19 +81,19 @@
             <input type="password" name="password" id="password" class="form-control"
               placeholder="Escribe tu contraseña" />
           </div>
+
+          <div class=" text-center">
+        <a href="{% url 'd_home' %}" type="button">Diseñador</a>
+        <a href="{% url 'a_home' %}" type="button">Administrador</a>
+        <a href=" {% url 'f_home' %}" type="button">Funcionario</a>
+      </div>
   
-          <button class="btn btn-primary" href=" {% url 'd_home' %}">
-            Ingresar(Disenador)
-          </button>
+          
+          
         </form>
       </div>
 
-      <div class=" text-center">
-        <a href="{% url 'a_home' %}" type="button">Administrador</a>
-        <a href="" type="button">Usuario</a>
-
-
-      </div>
+      
     </section>
     
   </div>

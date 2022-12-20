@@ -26,3 +26,5 @@ class Usuarios(models.Model):
     registrado_por = models.TextField()
 
     
+
+    

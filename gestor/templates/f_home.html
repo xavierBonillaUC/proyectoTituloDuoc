@@ -1,50 +1,50 @@
-{% extends 'a_base.html' %}
-<!--Contenido  -->
-{% block admin %}
+{% extends 'f_base.html' %}
+<!--Contenido Administrador-->
+{% block func %}
 <div class="dashboard-content px-3 pt-4">
   <div class="card">
     <div class="card-body">
-      <h2 class="fs-3">Administrar Unidad Interna</h2>
-      <p class="fs-5">Lista de unidades internas existentes</p>
+      <h2 class="fs-3">Tareas Recibidas</h2><br>
+      <a> Solicitud de tareas</a>
       <table class="table table-striped ">
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Unidad Interna</th>
-            <th scope="col">Numero de usuarios</th>
+            <th scope="col">Tarea</th>
+            <th scope="col">Fecha plazo</th>
+            <th scope="col">Asignado por</th>
             
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row"></th>
-            <td></td>
-            <td></td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>Otto</td>
             
           </tr>
           <tr>
             <th scope="row"></th>
             <td></td>
             <td></td>
-            
+            <td></td>
+        
           </tr>
           <tr>
             <th scope="row"></th>
+            <td></td>
             <td></td>
             <td></td>
             
           </tr>
         </tbody>
-      </table>
-
-      <button class="btn btn-danger">Eliminar</button>
-      <a href="{% url 'a_admUni' %}" class="bg-primary rounded px-3 py-2 text-white text-decoration-none" >Modificar</a>
+      </table><br>
+      
       
 
     </div>
   </div>
-
-  
   
 </div><br>
 

@@ -7,7 +7,7 @@ from .forms import TaskForm
 from .models import Task
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
-
+from .models import Usuarios
 
 # Create your views here.
 def home(request):
@@ -108,16 +108,20 @@ def signin(request):
         'form' : AuthenticationForm
          })
     else :
-        user = authenticate(
-            request, username=request.POST['username'], password=request.POST['password'])
-        if user is None:
+        Usuarios = authenticate(request, username=request.POST['username'], password=request.POST['password'])
+        if Usuarios is None:
             return render(request, 'signin.html', {
                 'form' : AuthenticationForm,
                 'error' : 'Usuario o Contraseña incorrecta '
             })
         else:
-            login(request, user)
-            return redirect('d_home') 
+            login(request, Usuarios)
+            if tipo_nivel == 'Funcionario':
+                return render(request, 'f_home.html')
+            elif tipo_nivel == 'Administrador':
+                return render(request, 'a_home.html')
+            else :    
+                return render(request, 'd_home.html')
       
 
 
@@ -163,5 +167,23 @@ def a_admUni(request):
 
 def a_crearrol(request):
     return render(request, 'a_crearrol.html') 
+
+def f_home(request):
+    return render(request, 'f_home.html')     
+
+def f_crearTa(request):
+    return render(request, 'f_crearTa.html')    
+
+def f_tareasig (request):
+    return render(request, 'f_tareasig.html') 
+
+def f_vista (request):
+    return render(request, 'f_vista.html') 
+
+def f_carga (request):
+    return render(request, 'f_carga.html') 
+
+    
+
 
     
