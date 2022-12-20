@@ -8,7 +8,7 @@ Para la visualizacion del sitio es necesario seguir las siguientes instrucciones
 
 1.- Con el terminal Crear un Directorio local en un lugar de facil acceso (por ejemplo en el escritorio)
 
-2.- Clonar en este directorio el repositorio con el comando "git clone https://github.com/xavierBonillaUC/pTitulo.git"
+2.- Clonar en este directorio el repositorio con el comando "git clone https://github.com/xavierBonillaUC/proyectoTituloDuoc"
 
 3.- Una vez clonado el repositorio, situarse en el directorio donde estan las carpetas "bodega", "myenv", ".vscode" 
     (esto podemos verificarlo teclando "ls" en el directorio y mostrara carpetas que se encuentran alli.
